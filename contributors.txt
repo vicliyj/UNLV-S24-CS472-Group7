@@ -1,0 +1,13 @@
+# This is the official list of people who can contribute
+# (and typically have contributed) code to the original works
+# in this repository.
+#
+#
+# Full Name - github username
+#
+#
+# Contributors:
+#
+
+Kamil Dusejovsky - @dusek2
+
