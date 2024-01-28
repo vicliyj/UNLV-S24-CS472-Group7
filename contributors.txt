@@ -12,11 +12,6 @@
 Kamil Dusejovsky - @dusek2
 Alexander Schupp - @MoldyPotat
 Alex Costa       - @Alexmc567   
-<<<<<<< HEAD
 Brandon Cunningham - @barkangel  
 Antonio Tessier  - @thegreatzoidberg
-=======
-Brandon Cunningham- @barkangel  
-Antonio Tessier  - @thegreatzoidberg
 
->>>>>>> 70bc12545c2445eaf5f48eb560192b8bd2784680
