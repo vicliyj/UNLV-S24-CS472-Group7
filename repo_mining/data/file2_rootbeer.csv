@@ -1,0 +1,37 @@
+Filename,Name,Date
+app/src/main/java/com/scottyab/rootbeer/sample/CheckForRootWorker.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeerNative.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/cpp/toolChecker.cpp,Scott Alexander-Bown,2021-05-22T13:42:21Z
+rootbeerlib/src/main/cpp/toolChecker.h,Scott Alexander-Bown,2021-05-22T13:42:21Z
+app/src/main/java/com/scottyab/rootbeer/sample/CheckRootTask.java,Andy Barber,2016-07-01T14:40:45Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootbeer/sample/MainActivity.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/RootItemResult.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/RootSampleApp.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/TextViewFont.java,Andy Barber,2016-07-01T14:40:45Z
+app/src/main/java/com/scottyab/rootbeer/sample/extensions/ViewExtensions.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/ResultIconView.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/RootItemAdapter.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/RootedResultTextView.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+app/src/main/java/com/scottyab/rootbeer/sample/ui/ScopedActivity.kt,Scott Alexander-Bown,2021-05-08T14:18:37Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/Const.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/Utils.java,Scott Alexander-Bown,2015-06-30T14:14:08Z
+rootbeerlib/src/test/java/com/scottyab/rootbeer/RootBeerTest.java,matthew,2017-10-31T18:57:32Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/RootBeer.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/java/com/scottyab/rootbeer/util/QLog.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/androidTest/java/com/scottyab/rootbeer/ApplicationTest.java,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/src/main/jni/toolChecker.cpp,matthew,2017-03-13T22:35:27Z
+rootbeerlib/src/main/jni/toolChecker.h,matthew,2017-03-13T22:35:27Z
+rootbeerlib/jni/toolChecker.cpp,Scott Alexander-Bown,2015-06-26T15:50:40Z
+rootbeerlib/jni/toolChecker.h,Scott Alexander-Bown,2015-06-26T15:50:40Z
+app/src/main/java/com/scottyab/rootchecker/RootCheck.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
+app/src/main/java/com/scottyab/rootchecker/Const.java,Matthew Rollings,2015-06-26T14:32:45Z
+app/src/main/java/com/scottyab/rootchecker/MainActivity.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
+app/jni/toolChecker.cpp,Matthew Rollings,2015-06-19T11:06:02Z
+app/jni/toolChecker.h,Matthew Rollings,2015-06-19T11:06:02Z
+app/src/main/java/com/scottyab/rootchecker/RootCheckNative.java,Matthew Rollings,2015-06-19T10:09:22Z
+app/jni/rootChecker.cpp,Matthew Rollings,2015-06-19T10:09:22Z
+app/jni/rootChecker.h,Matthew Rollings,2015-06-19T10:09:22Z
+app/src/androidTest/java/com/scottyab/rootchecker/ApplicationTest.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
+app/src/main/java/com/scottyab/rootchecker/util/QLog.java,Scott Alexander-Bown,2015-06-19T09:05:10Z
