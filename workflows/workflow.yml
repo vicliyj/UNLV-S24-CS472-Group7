@@ -1,0 +1,11 @@
+name: CI Lab
+
+on:
+  push: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    run-ons: ubuntu-latest
+      container: python:3.9-slim
