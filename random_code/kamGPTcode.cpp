@@ -5,22 +5,24 @@
 #include <unordered_map>
 #include <string>
 
-void searchSubstrings(std::unordered_map<std::string, int>& foundSubstrings, std::unordered_map<std::string, int> wordList, 
+void searchSubstrings(std::unordered_map<std::string, int> &foundSubstrings, std::unordered_map<std::string, int> wordList,
                       std::string &targetString, int startPosition, int wordLength, std::string currentSubstring);
-void displaySubstrings(std::unordered_map<std::string, int>::iterator iter, std::unordered_map<std::string, int>& substringCounts);
+// Displays all found substrings and their counts
+void displaySubstrings(const std::unordered_map<std::string, int> &substringCounts);
 
 int main()
 {
+    // Data structures to store word frequency and substring counts
     std::unordered_map<std::string, int> wordFrequencyMap;
     std::unordered_map<std::string, int> substringCountMap;
 
     // Input target string
-    std::cout << "Enter mega word:";
-    std::string targetWord;
-    std::cin >> targetWord;
+    std::cout << "Enter target string: ";
+    std::string targetString;
+    std::cin >> targetString;
 
     // Input list of words
-    std::cout << "Enter list of words:\n";
+    std::cout << "Enter list of words (type 'END' to finish):\n";
     std::string inputWord;
     std::cin >> inputWord;
 
@@ -31,59 +33,55 @@ int main()
         std::cin >> inputWord;
     }
 
-    int firstWordLength = wordFrequencyMap.begin()->first.size();
-
+    int wordLength = wordFrequencyMap.begin()->first.size();
     std::cout << "List of substrings :\n";
-
-    while(targetWord.size() >= firstWordLength)
+    // Search for substrings
+    while (targetString.size() >= wordLength)
     {
+        // Iterate through the word frequency map
         for (auto mapIter = wordFrequencyMap.begin(); mapIter != wordFrequencyMap.end(); ++mapIter)
         {
-            auto foundPosition = targetWord.find(mapIter->first);
-
+            // Find the position of the word in the target string
+            auto foundPosition = targetString.find(mapIter->first);
             if (foundPosition != std::string::npos)
-            {
-                searchSubstrings(substringCountMap, wordFrequencyMap, targetWord, foundPosition, firstWordLength, mapIter->first);
-            }
+                searchSubstrings(substringCountMap, wordFrequencyMap, targetString, foundPosition, wordLength, mapIter->first);
         }
-        targetWord.erase(0, firstWordLength);
+        targetString.erase(0, wordLength);
     }
+    // Display the found substrings
     if (substringCountMap.empty())
         std::cout << "no solution\n";
     else
-        displaySubstrings(substringCountMap.begin(), substringCountMap);
+        displaySubstrings(substringCountMap);
     return 0;
 }
 
-void searchSubstrings(std::unordered_map<std::string, int>& substringCounts, std::unordered_map<std::string, int> wordList,
+// Recursive function to search for substrings
+void searchSubstrings(std::unordered_map<std::string, int> &substringCounts, std::unordered_map<std::string, int> wordList,
                       std::string &targetString, int index, int wordLength, std::string currentSubstring)
 {
     std::string foundWord = targetString.substr(index, wordLength);
     wordList.erase(foundWord);
-    
+    // Update the index
     index += wordLength;
-
+    // Update the current substring
     if (wordList.empty())
     {
         substringCounts[currentSubstring]++;
         return;
     }
-
+    // Find the next word
     std::string nextWord = targetString.substr(index, wordLength);
     for (auto listIter = wordList.begin(); listIter != wordList.end(); ++listIter)
     {
-        if(nextWord == listIter->first)
-            searchSubstrings(substringCounts, wordList, targetString, index, wordLength, currentSubstring+nextWord);
+        if (nextWord == listIter->first)
+            searchSubstrings(substringCounts, wordList, targetString, index, wordLength, currentSubstring + nextWord);
     }
 }
 
-void displaySubstrings(std::unordered_map<std::string, int>::iterator iter, std::unordered_map<std::string, int>& substringCounts)
+// Displays all found substrings and their counts
+void displaySubstrings(const std::unordered_map<std::string, int> &substringCounts)
 {
-    if (iter == substringCounts.end())
-        return;
-    std::unordered_map<std::string, int>::iterator nextIter = iter;
-    nextIter++;
-    displaySubstrings(nextIter, substringCounts);
-    std::cout << iter->first << "\n";
-    return;
+    for (const auto &pair : substringCounts)
+        std::cout << pair.first << " - Count: " << pair.second << '\n';
 }
