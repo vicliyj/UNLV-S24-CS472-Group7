@@ -1,25 +1,21 @@
 #include <iostream>
-using namespace std;
 
-// Function to fill an array with multiples of 5
-void fillArrayWithMultiplesOfFive(int array[], int size) {
-    for (int index = 0; index < size; ++index) {
-        array[index] = index * 5; // Calculate and assign multiples of 5
+void fill(int a[], int x) {
+    for (int i = 0; i < x; ++i) {
+        a[i] = i * 5;
     }
 }
 
 int main() {
-    const int arraySize = 10; // Size of the array
-    int FivesArray[arraySize]; // Array to store multiples of 5
+    const int x = 10;
+    int a[x];
 
-    // Fill the array with multiples of 5
-    fillArrayWithMultiplesOfFive(FivesArray, arraySize);
+    fill(a, x);
 
-    // Print the array contents
-    for (int index = 0; index < arraySize; ++index) {
-        cout << FivesArray[index] << " "; // Output each element
+    for (int i = 0; i < x; ++i) {
+        std::cout << a[i] << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 
     return 0;
 }
