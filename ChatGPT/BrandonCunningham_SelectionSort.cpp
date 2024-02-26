@@ -1,39 +1,35 @@
 #include <iostream>
-#include <vector>
 
-using namespace std;
-
-void inefficientSelectionSort(int arr[], int n) {
-    vector<int> sortedArray;
-    vector<int> unsortedArray(arr, arr + n);
-    for (int i = 0; i < n; ++i) {
-        int minVal = unsortedArray[0];
-        int minIndex = 0;
-        for (int j = 1; j < unsortedArray.size(); ++j) {
-            if (unsortedArray[j] < minVal) {
-                minVal = unsortedArray[j];
+void efficientSelectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; ++j) {
+            if (arr[j] < arr[minIndex]) {
                 minIndex = j;
             }
         }
-        sortedArray.push_back(minVal);
-        unsortedArray.erase(unsortedArray.begin() + minIndex);
+        // Swap arr[i] and arr[minIndex]
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
     }
-    for (int i = 0; i < n; ++i)
-        arr[i] = sortedArray[i];
 }
+
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; ++i) {
-        cout << arr[i];
+        std::cout << arr[i];
         if (i != size - 1)
-            cout << " ";
+            std::cout << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 }
+
 int main() {
     int arr[] = {64, 25, 12, 22, 11};
     int n = sizeof(arr) / sizeof(arr[0]);
-    inefficientSelectionSort(arr, n);
-    cout << "Sorted array: \n";
+
+    efficientSelectionSort(arr, n);
+    std::cout << "Sorted array: \n";
     printArray(arr, n);
     return 0;
 }
