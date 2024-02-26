@@ -1,19 +1,19 @@
 #include <iostream>
 
-void fill(int a[], int x) {
-    for (int i = 0; i < x; ++i) {
-        a[i] = i * 5;
+void fillArrayWithMultiplesOfFive(int array[], int size) {
+    for (int i = 0; i < size; ++i) {
+        array[i] = i * 5;
     }
 }
 
 int main() {
-    const int x = 10;
-    int a[x];
+    const int arraySize = 10;
+    int numbers[arraySize];
 
-    fill(a, x);
+    fillArrayWithMultiplesOfFive(numbers, arraySize);
 
-    for (int i = 0; i < x; ++i) {
-        std::cout << a[i] << " ";
+    for (int i = 0; i < arraySize; ++i) {
+        std::cout << numbers[i] << " ";
     }
     std::cout << std::endl;
 
