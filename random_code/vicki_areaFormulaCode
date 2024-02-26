@@ -1,0 +1,11 @@
+#Using the area formula, area = length * width
+
+while True:
+  length = int(input("Enter the length value: "))
+  if length > 0:
+    break
+while True:
+  width = int(input("Enter the width: "))
+  if width > 0:
+    break
+print("The Area is", length * width)
