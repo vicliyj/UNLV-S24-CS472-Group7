@@ -56,7 +56,25 @@ int main()
     return 0;
 }
 
-// Recursive function to search for substrings
+/**
+* @brief Recursively searches for substrings composed of words from a word list.
+*
+* Recursively searches for substrings within a target string that are composed of
+* words from a given word list. Counts the occurrences of each found substring.
+*
+* @param substringCounts An unordered_map (passed by reference) to store the counts of
+*        found substrings. Keys are the substrings, values are their counts.
+* @param wordList An unordered_map containing the words to search for. It is copied
+*        to prevent modification of the original list.
+* @param targetString The string to search within.
+* @param index The starting index for the current search iteration.
+* @param wordLength The length of the words in the word list.
+* @param currentSubstring The substring accumulated so far in the recursive process.
+*
+* @note This function modifies the `substringCounts` map to store substring counts.
+* @note Assumes all words in the `wordList` have the same length (`wordLength`).
+* @note Assumes the `targetString` contains sufficient characters for potential substrings.
+*/
 void searchSubstrings(std::unordered_map<std::string, int> &substringCounts, std::unordered_map<std::string, int> wordList,
                       std::string &targetString, int index, int wordLength, std::string currentSubstring)
 {
