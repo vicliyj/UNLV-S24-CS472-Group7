@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int complex_operation(int x, int y) {
+    int a = x / 2 * y + x % 3;
+    int b = x + y / 2;
+    int c = x * y + x / y;
+    int result = a * b / c;
+    return result;
+}
+
+int main() {
+    int x = 10, y = 5;
+    int result = complex_operation(x, y);
+    cout << "Result of complex operation: " << result << endl;
+    return 0;
+}
